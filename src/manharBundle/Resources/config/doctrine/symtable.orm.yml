@@ -1,0 +1,27 @@
+manharBundle\Entity\symtable:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        author:
+            type: string
+            length: 255
+        coment:
+            type: text
+        photo:
+            type: string
+            length: 255
+        date:
+            type: date
+        time:
+            type: time
+
+    lifecycleCallbacks: {  }

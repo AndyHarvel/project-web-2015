@@ -1,0 +1,22 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+
+{% if form.delete is defined %}
+            Voulez vous vraiment supprimer le footballeur  ?
+
+<br>
+{{ form(form) }}
+</br>
+<br>
+            <a href="{{ path('manhar_list') }}">
+
+              <INPUT TYPE="SUBMIT" VALUE="annuler ">
+
+            </a>
+
+</br>
+{% endif %}
+
+
+{% endblock %}

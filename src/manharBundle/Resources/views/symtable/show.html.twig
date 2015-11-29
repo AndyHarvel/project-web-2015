@@ -1,0 +1,43 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+<h1 href="{{ path('manhar_show', {'id':  symtable.Id  }) }}">
+
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-2" style="background-color:Gainsboro;">
+          <br>
+            <span style="font-size: 18px;">Cree le : </span> {{symtable.date|date("d/m/Y") }}
+          </br>
+        <br>
+             <span style="font-size: 18px;">Par : </span>   {{symtable.author}}
+        </br>
+      </div>
+      <div class="col-sm-6" style="background-color:lavender;">
+       <br> {{symtable.coment}} </br>
+     </div>
+      <div class="col-sm-4" style="background-color:Gainsboro;">
+      <center>
+      <p>  <img src="{{asset('uploads/' ~ symtable.Id ~ '.jpeg') }}" alt=""  width="410" height="220" /> </p>
+     <center>
+      </div>
+  </div>
+</div>
+<header id="header">
+            </header>
+
+
+</h1>
+
+ <a href="{{ path('manhar_list') }}">
+
+              <INPUT TYPE="SUBMIT" VALUE=" retour ">
+
+            </a>   </h3>
+
+
+
+{% endblock %}
+

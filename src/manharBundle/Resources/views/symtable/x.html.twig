@@ -1,0 +1,20 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+
+<div class="container">
+  <h2  style="color:blue;">
+
+<span style="font-size:30px;">Postes</span>
+
+<br></br>
+</h2>
+ <div class="list-group">
+   <h1><a href="{{ path('manhar_attaquant') }}" class="list-group-item list-group-item-info ">Attaquant</a></h1>
+   <h1><a href="{{ path('manhar_millieu') }}" class="list-group-item list-group-item-info ">Millieu</a></h1>
+   <h1> <a href="{{ path('manhar_defenseur') }}" class="list-group-item list-group-item-info ">Defenseur</a> </h1>
+   <h1>  <a href="{{ path('manhar_gardien') }}" class="list-group-item list-group-item-info">Gardien</a> </h1>
+</div>
+</div>
+
+{% endblock %}

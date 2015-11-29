@@ -1,0 +1,57 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+<div class="container">
+   <h2  style="color:blue;">
+
+<span style="font-size:30px;">Defenseur</span> </h2>
+  <div class="list-group">
+   <h1><a href="{{ path('manhar_attaquant') }}" class="list-group-item list-group-item-info ">Attaquant</a></h1>
+   <h1><a href="{{ path('manhar_millieu') }}" class="list-group-item list-group-item-info ">Millieu</a></h1>
+   <h1> <a href="{{ path('manhar_defenseur') }}" class="list-group-item list-group-item-info active">Defenseur</a> </h1>
+   <h1>  <a href="{{ path('manhar_gardien') }}" class="list-group-item list-group-item-info">Gardien</a> </h1>
+</div>
+</div>
+
+    
+{% for p in symtable %}
+{% if p.Id is defined %}
+ {% if p.title == "defenseur" %}
+<br>Posté par : {{p.author}} ,Le : {{p.date|date("d/m/Y") }}</br>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-2" style="background-color:Gainsboro;">
+          <br>
+        <a href="{{ path('manhar_edit', {'id': p.Id}) }}">
+          <INPUT TYPE="SUBMIT" VALUE=" Editer ">
+        </a>
+          </br>
+          <br>
+              <a href="{{ path('manhar_delete', {'id': p.Id}) }}">
+             <INPUT TYPE="SUBMIT" VALUE=" Supprimer ">
+               </a>
+           </br>
+        <br>
+        <a href="{{ path('manhar_show', {'id': p.Id}) }}">
+          <INPUT TYPE="SUBMIT" VALUE=" Visualiser ">
+        </a>
+        </br>
+      </div>
+      <div class="col-sm-6" style="background-color:lavender;">
+       <br> {{p.coment}} </br>
+     </div>
+      <div class="col-sm-4" style="background-color:Gainsboro;">
+      <center>
+      <p>  <img src="{{asset('uploads/' ~ p.Id ~ '.jpeg') }}" alt=""  width="410" height="220" /> </p>
+     <center>
+      </div>
+  </div>
+</div>
+<header id="header">
+            </header>
+
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+manharBundle\Entity\Presse:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        photo:
+            type: array
+        commentaire:
+            type: text
+    lifecycleCallbacks: {  }

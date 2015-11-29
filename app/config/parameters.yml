@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: mysql.hostinger.fr
+    database_port: null
+    database_name: u871602934_datab
+    database_user: u871602934_root
+    database_password: esiea2015
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 45d994a4754db5c128992e236f1e76b7f494e157

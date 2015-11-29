@@ -1,0 +1,22 @@
+{% extends '::bas.html.twig' %}
+{% block body %}
+
+
+<div class="container">
+  <h2  style="color:blue;">
+
+<span style="font-size:30px;">Formulaire pour ajouter un nouveau footballeur''</span>
+</h2>
+<tr>
+{{ form(form) }} 
+</tr>
+<tr>
+ {{form_row(form.title) }}  
+</tr>
+<tr>
+  {{form_row(form.author) }} 
+</tr> 
+  {{form_row(form.coment) }} 
+{{form_row(form.photo) }} 
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% block body %}
+                 <div class="top">
+                    {% block navigation %}
+                        <nav>
+                            <ul class="navigation">
+                              <li><a href="{{ path('manhar_home') }}">Home</a></li>
+                              <li><a href="{{ path('manhar_about') }}">About</a></li>
+                              <li><a href="{{ path('manhar_list') }}">Commentaires</a></li>
+                            </ul>
+                        </nav>
+                    {% endblock %}
+                </div>
+
+  <table border="1" width="80%">
+     <tr>
+        <th>Id</th><th>title</th><th>author</th><th>supprimer</th><th>visualiser</th><th>editer</th>
+     </tr>
+     {% for p in symtable %}
+     <tr>
+           <td>{{ p.Id    }} </td>
+           <td>{{ p.title }} </td>
+           <td>{{ p.author}} </td>
+            
+           <td>
+              <a href="{{ path('manhar_delete', {'id': p.Id}) }}"> 
+             <INPUT TYPE="SUBMIT" VALUE=" Supprimer ">
+               </a>
+           </td>
+
+     <td>
+        <a href="{{ path('manhar_show', {'id': p.Id}) }}">
+          <INPUT TYPE="SUBMIT" VALUE=" Visualiser ">
+        </a>
+    </td>
+
+     <td>
+        <a href="{{ path('manhar_edit', {'id': p.Id}) }}">
+          <INPUT TYPE="SUBMIT" VALUE=" Editer ">
+        </a>
+    </td>
+
+     </tr>
+
+   {% endfor %}
+   </table>
+
+     <td>
+        <a href="{{ path('manhar_ajout') }}">
+       
+        </a>
+    </td>
+
+<FORM ACTION="  /hello-world/ajout">
+    <INPUT TYPE="SUBMIT" VALUE="  Nouveau  ">
+  </FORM>  
+{% endblock %}
+

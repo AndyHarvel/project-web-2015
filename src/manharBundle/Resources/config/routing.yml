@@ -1,0 +1,43 @@
+manhar_lista:
+     path:      /hello-world/lista
+     defaults:  { _controller: manharBundle:symtable:lista }
+
+manhar_millieu:
+     path:      /hello-world/millieu
+     defaults:  { _controller: manharBundle:symtable:millieu }
+
+manhar_attaquant:
+     path:      /hello-world/attaquant
+     defaults:  { _controller: manharBundle:symtable:attaquant }
+
+manhar_gardien:
+     path:      /hello-world/gardien
+     defaults:  { _controller: manharBundle:symtable:gardien }
+
+manhar_defenseur:
+     path:      /hello-world/defenseur
+     defaults:  { _controller: manharBundle:symtable:defenseur }
+
+manhar_list:
+     path:      /hello-world/list
+     defaults:  { _controller: manharBundle:symtable:list }
+
+manhar_delete:
+     path:      /hello-world/delete/{id}
+     defaults:  { _controller: manharBundle:symtable:delete }
+
+manhar_show:
+     path:      /hello-world/show/{id}
+     defaults:  { _controller: manharBundle:symtable:show }
+
+manhar_edit:
+     path:      /hello-world/{id}/edit
+     defaults:  { _controller: manharBundle:symtable:edit }
+
+manhar_ajout:
+     path:      /hello-world/ajout
+     defaults:  { _controller: manharBundle:symtable:ajout }
+
+manhar_about:
+     path:      /hello-world/about
+     defaults:  { _controller: manharBundle:symtable:about }
